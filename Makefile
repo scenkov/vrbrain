@@ -864,7 +864,7 @@ all_$(1)_clean: $$(addsuffix _clean, $$(filter bu_$(1), $$(BU_TARGETS)))
 all_$(1)_clean: $$(addsuffix _clean, $$(filter ef_$(1), $$(EF_TARGETS)))
 endef
 
-ALL_BOARDS := coptercontrol pipxtreme revolution revomini simposix osd
+ALL_BOARDS := coptercontrol pipxtreme vrbrain revolution revomini simposix osd
 ALL_BOARDS_BU := coptercontrol pipxtreme simposix
 
 # SimPosix only builds on Linux so drop it from the list for
@@ -881,6 +881,7 @@ revolution_friendly    := Revolution
 revomini_friendly      := RevoMini
 simposix_friendly      := SimPosix
 osd_friendly           := OSD
+vrbrain_friendly       := Vrbrain
 
 # Short names of each board (used to display board name in parallel builds)
 coptercontrol_short    := 'cc  '
@@ -889,6 +890,7 @@ revolution_short       := 'revo'
 revomini_short         := 'rm  '
 simposix_short         := 'posx'
 osd_short              := 'osd '
+vrbrain_short          := 'vrb '
 
 # Start out assuming that we'll build fw, bl and bu for all boards
 FW_BOARDS  := $(ALL_BOARDS)
@@ -898,7 +900,7 @@ EF_BOARDS  := $(ALL_BOARDS)
 
 # FIXME: The BU image doesn't work for F4 boards so we need to
 #        filter them out to prevent errors.
-BU_BOARDS  := $(filter-out revolution osd, $(BU_BOARDS))
+BU_BOARDS  := $(filter-out revolution vrbrain osd, $(BU_BOARDS))
 
 # SimPosix doesn't have a BL, BU or EF target so we need to
 # filter them out to prevent errors on the all_flight target.

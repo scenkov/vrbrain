@@ -13,6 +13,8 @@
 #include "STM32F2xx_INS.h"
 #elif USE_STM32F4xx_OP
 #include "STM32F4xx_Revolution.h"
+#elif USE_STM32F4xx_VRB
+#include "STM32F4xx_Vrbrain.h"
 #elif USE_STM32F4xx_OSD
 #include "STM32F4xx_OSD.h"
 #elif USE_STM32F4xx_RM

@@ -100,19 +100,19 @@ TIM8  |           |           |           |
 // PIOS_I2C
 // See also pios_board.c
 //------------------------
-#define PIOS_I2C_MAX_DEVS			3
+#define PIOS_I2C_MAX_DEVS			1
 extern uint32_t pios_i2c_mag_adapter_id;
 #define PIOS_I2C_MAIN_ADAPTER			(pios_i2c_mag_adapter_id)
-extern uint32_t pios_i2c_flexiport_adapter_id;
-#define PIOS_I2C_FLEXI_ADAPTER			(pios_i2c_flexiport_adapter_id)
-#define PIOS_I2C_ETASV3_ADAPTER			(PIOS_I2C_FLEXI_ADAPTER)
+//extern uint32_t pios_i2c_flexiport_adapter_id;
+//#define PIOS_I2C_FLEXI_ADAPTER			(pios_i2c_flexiport_adapter_id)
+//#define PIOS_I2C_ETASV3_ADAPTER			(PIOS_I2C_FLEXI_ADAPTER)
 
 //-------------------------
 // PIOS_USART
 //
 // See also pios_board.c
 //-------------------------
-#define PIOS_USART_MAX_DEVS             5
+#define PIOS_USART_MAX_DEVS             3
 
 //-------------------------
 // PIOS_COM
