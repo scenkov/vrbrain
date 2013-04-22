@@ -213,7 +213,8 @@ void ConfigGadgetWidget::onAutopilotConnect() {
                    (board & 0xff00) == 0x8300 || // FlyingF3
                    (board & 0xff00) == 0x8400 || // FlyingF4
                    (board & 0xff00) == 0x8500 || // DiscoveryF4
-                   (board & 0xff00) == 0x8600    // Quanton
+                   (board & 0xff00) == 0x8600 || // Quanton
+                   (board & 0xff00) == 0x8700    // VRBrain
                    ) {
             // Non-CopterControl family
             ftw->setCurrentIndex(ConfigGadgetWidget::hardware);
